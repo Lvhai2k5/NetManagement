@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40198D1D-A290-4088-99C4-19C963BE4A47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyTiemNet</RootNamespace>
+    <AssemblyName>QuanLyTiemNet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom.cs" />
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\waiter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\clerk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\ceo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\mm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\website.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\draw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\cancelled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\mobile-payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\pictures\cashier.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
